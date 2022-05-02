@@ -1,0 +1,27 @@
+{
+    "manifest_version": 1,
+    "version": "1.0.0",
+    "short_name": "Manuelizator",
+    "name": "Aggiungi un manuello ai tuoi selfie!",
+    "icons": [
+        {
+            "src": "/resources/icons-vector.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/resources/icons-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/resources/icons-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/?source=pwa",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "scope": "/"
+}

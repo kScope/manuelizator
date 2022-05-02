@@ -1,0 +1,52 @@
+#src-image {
+    display: none;
+}
+
+#upload-button {
+    display: block;
+}
+
+#template {
+    display: none;
+}
+
+/* Pannelli di upload e risultato */
+#upload {
+    display: block;
+}
+
+#result {
+    display: none;
+}
+
+.completed #upload {
+    display: none;
+}
+
+.completed #result {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+header > img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+
+header > h1 {
+    text-align: center;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 2rem !important;
+}
+
+.bullsh {
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.bullsh > small {
+}
