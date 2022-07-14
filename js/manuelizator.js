@@ -1,3 +1,5 @@
+import {Randomizer} from './randomizer.js';
+
 export class Manuelizator {
 
     _canvas;
@@ -5,6 +7,7 @@ export class Manuelizator {
     _template;
     _context;
     _uploadedImage;
+    _randomizer = new Randomizer();
 
     attributi = [
         "potenziato",
@@ -43,15 +46,13 @@ export class Manuelizator {
 
                 fr.onload = (e) => {
                     this._uploadedImage.src = e.target.result;
-
                 };
 
                 fr.readAsDataURL(this._input.files[0]);
             }
         });
 
-        this._uploadedImage.addEventListener('load', x => {
-
+        this._template.addEventListener('load', x => {
             // Copio l'immagine nel canvas
             this._canvas.width = this._uploadedImage.width;
             this._canvas.height = this._uploadedImage.height;
@@ -68,6 +69,13 @@ export class Manuelizator {
 
             document.getElementsByTagName('body')[0].classList.add('completed');
             this._attributo.innerText = this.attributi[Math.floor(Math.random() * this.attributi.length)].toUpperCase();
+        });
+
+        this._uploadedImage.addEventListener('load', x => {
+
+            this._template.src = this._randomizer.getImage();
+
+            
         });
 
 
